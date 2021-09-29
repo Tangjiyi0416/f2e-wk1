@@ -2,8 +2,16 @@
     font-family: 'Roboto', sans-serif;
 }
 
+body {
+    overflow: hidden;
+}
+
 body .btn {
-    font-size: 7rem!important;
+    font-size: 8rem!important;
+}
+
+.jc {
+    font-size: 3rem!important;
 }
 
 .offset1 {
@@ -16,18 +24,10 @@ body .btn {
     left: -24%;
 }
 
-.offset3 {
-    position: relative;
-    left: -36%;
-}
-
-.offset4 {
-    position: relative;
-    left: -48%;
-}
-
 .overlap {
     display: grid;
+    width: 100%;
+    white-space: nowrap;
     /* Set horizontal alignment of items in, case they have a different width. */
     /* justify-items: start | end | center | stretch (default); */
     justify-items: start;
@@ -43,7 +43,6 @@ body .btn {
 
 .scrolling {
     margin: 0 auto;
-    white-space: nowrap;
     overflow: hidden;
 }
 
@@ -53,8 +52,8 @@ body .btn {
     opacity: 0.3;
     display: inline-block;
     padding-left: 100%;
-    animation: scrolling 10s linear infinite;
-    animation-delay: -5s;
+    animation: scrolling 20s linear infinite;
+    animation-delay: -10s;
 }
 
 .scrolling2 span {

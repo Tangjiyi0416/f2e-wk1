@@ -6,31 +6,66 @@ body .btn {
     font-size: 7rem!important;
 }
 
-.rollingbg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+.offset1 {
+    position: relative;
+    left: -12%;
+}
+
+.offset2 {
+    position: relative;
+    left: -24%;
+}
+
+.offset3 {
+    position: relative;
+    left: -36%;
+}
+
+.offset4 {
+    position: relative;
+    left: -48%;
+}
+
+.overlap {
+    display: grid;
+    /* Set horizontal alignment of items in, case they have a different width. */
+    /* justify-items: start | end | center | stretch (default); */
+    justify-items: start;
+    /* Set vertical alignment of items, in case they have a different height. */
+    /* align-items: start | end | center | stretch (default); */
+    align-items: start;
+}
+
+.overlap>* {
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+
+.scrolling {
+    margin: 0 auto;
+    white-space: nowrap;
     overflow: hidden;
 }
 
-.rollingtext {
-    transform: rotate(30deg)!important;
+.scrolling span {
     font-family: Roboto;
-    font-style: normal;
-    font-weight: normal;
     font-size: 3rem;
     opacity: 0.3;
-    animation: scrollText 8s infinite linear;
-    overflow: hidden;
+    display: inline-block;
+    padding-left: 100%;
+    animation: scrolling 10s linear infinite;
+    animation-delay: -5s;
 }
 
-@keyframes scrollText {
-    from {
-        transform: translate(0) rotate(30deg);
+.scrolling2 span {
+    animation-delay: 0s;
+}
+
+@keyframes scrolling {
+    0% {
+        transform: translate(-100%, 0);
     }
-    to {
-        transform: translate(173.2vh, 100vh) rotate(30deg);
+    100% {
+        transform: translate(0%, 0);
     }
 }
